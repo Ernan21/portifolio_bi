@@ -145,15 +145,15 @@ details summary img:hover {
 
 .modal-content {
     position: fixed;
-    top: 2%;
-    left: 13%; 
-    /* transform: translate(-25%, -25%); */
+    /* top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); */
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 1080px;
-    height: 720px;
+    width: 100%;
+    height: 100%;
 }
 
 .close-modal {
@@ -173,13 +173,34 @@ details summary img:hover {
 @media (max-width: 768px) {
     #tab_page {
         flex-direction: column;
-        gap: 10px;
+        gap: 5px;
+    }
+    #trabalhos > nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 5px;
     }
     .container {
         flex-direction: column;
         align-items: center;
     }
-    img{
+    .img_front_BI img {
+        width: 120px;
+    }
+    #sobre > .conteudo{
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        & p{
+            margin: 10px;
+        }
+    }
+    #sobre #conteudo img{
         width: 70px;
+    }
+    #iframe{
+        height: 230px;
+        width: 340px;
     }
 }
