@@ -1,55 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta name="description" content="Portfólio de Ernando Freitas - Projetos em Business Intelligence e Contato">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Ernando Freitas</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="script.js" defer></script>
 </head>
-
-
 <body>
+    <!-- Cabeçalho -->
     <header>
         <nav id="tab_page" aria-label="Menu principal">
             <span class="orbitron saudação">Seja Bem-Vindo</span>
             <ul class="tabs">
-                <li class="orbitron tabs_itens"><a href="#sobre" class="content">SOBRE</a></li>
-                <li class="orbitron tabs_itens"><a href="#contato" class="content">CONTATO</a></li>
-                <li class="orbitron tabs_itens"><a href="#trabalhos" class="content">TRABALHOS</a></li>
+                <li class="orbitron tabs_itens"><a href="#sobre" target="_blank">SOBRE</a></li>
+                <li class="orbitron tabs_itens"><a href="#contato" target="_blank">CONTATO</a></li>
+                <li class="orbitron tabs_itens"><a href="#trabalhos" target="_blank">TRABALHOS</a></li>
             </ul>
         </nav>
     </header>
-
-
-    <section id="sobre">
-        <h2>Sobre</h2>
-        <p>Olá, meu nome é Ernando, tenho <span id="idade"></span> anos e sou estudante da Universidade Estácio. Apaixonado por dados e tecnologia, atuo na área de Business Intelligence, onde transformo informações em soluções estratégicas. Possuo experiência em análise de dados, criação de dashboards interativos e suporte à tomada de decisões com base em insights analíticos.</p>
-        <br>
-        <p>Estou sempre em busca de novos desafios e oportunidades para ampliar meu conhecimento e contribuir para projetos inovadores. Meu objetivo é ajudar empresas a alcançarem melhores resultados por meio de estratégias orientadas por dados.</p>
-    </section>
     
+    <!-- Trabalhos -->
     <section id="trabalhos">
         <h2>Alguns Projetos</h2>
-        <div>
-            <details>
-                <summary>VENDA E DEVOLUÇÕES</summary>
-                <p>Desenvolvimento de relatórios para análise de vendas e devoluções, otimizando a tomada de decisão.</p>
-                <iframe title="VENDAS E DEVOLUÇÕES" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiODBhMGUyYjAtNGY1OC00MmRlLWFlYWYtNzg4YTFhNmI5MjZiIiwidCI6IjgyZTIxZGQyLTg2MzMtNDc0Yi1iNGU2LTUwZTBlY2M4NWNhMSJ9" frameborder="0" allowFullScreen="true"></iframe>
-            </details>
+        <nav>
+
+            <div class="img_front_BI" onclick='abrirModal("https://app.powerbi.com/view?r=eyJrIjoiODBhMGUyYjAtNGY1OC00MmRlLWFlYWYtNzg4YTFhNmI5MjZiIiwidCI6IjgyZTIxZGQyLTg2MzMtNDc0Yi1iNGU2LTUwZTBlY2M4NWNhMSJ9", "vendas e devoluções")'>
+                <img src="Assets\front\Relatorio_de_Vendas_e_Devolucoes.webp" alt="Relatório de Vendas e Devoluções">
+                <h1>Relatório de Vendas e Devoluções</h1>
+                <p>Este relatório apresenta uma análise detalhada das vendas e devoluções de produtos ao longo do ano. Inclui informações sobre a participação de mercado de categorias como iPhones, televisores, notebooks e outros dispositivos, além de destacar o faturamento total de R$ 99,3 milhões e a variação de desempenho mensal. O documento fornece insights estratégicos para identificar tendências e áreas de melhoria nos resultados de vendas e gestão de devoluções.</p>
+            </div>
+
+        </nav>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre</h2>
+        <div class="conteudo">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQH9elzQBNP4tQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1673440264973?e=1742428800&v=beta&t=L0pbt-N1H76amI7SsoGR-ap6qp7UVoTQVxW_Rlzir5M" alt="img_profile_linkedin" height="150">
+            <p>Olá, meu nome é Ernando, tenho <span id="idade"></span> anos e sou estudante da Universidade Estácio. Apaixonado por dados e tecnologia, atuo na área de Business Intelligence, onde transformo informações em soluções estratégicas. Possuo experiência em análise de dados, criação de dashboards interativos e suporte à tomada de decisões com base em insights analíticos. <br> Estou sempre em busca de novos desafios e oportunidades para ampliar meu conhecimento e contribuir para projetos inovadores. Meu objetivo é ajudar empresas a alcançarem melhores resultados por meio de estratégias orientadas por dados.</p>
         </div>
     </section>
 
+    <!-- Contato -->
     <section id="contato">
         <h2>Contato</h2>
-        <ul class="tabs" style="list-style: none;">
-            <li class="tabs_itens fab fa-whatsapp"><a href="https://wa.me/5585992477663">WhatsApp</a></li>
-            <li class="tabs_itens fab fa-linkedin"><a href="https://www.linkedin.com/in/ernandofreitas21">LinkedIn</a></li>
-            <li class="tabs_itens fa-regular fa-envelope"><a href="mailto:ernando.freitas123@gmail.com">Email</a></li>
+        <ul class="tabs">
+            <li><i class="fab fa-whatsapp"></i><a href="https://wa.me/5585992477663" target="_blank"> WhatsApp</a></li>
+            <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/ernandofreitas21" target="_blank"> LinkedIn</a></li>
+            <li><i class="fa-regular fa-envelope"></i><a href="mailto:ernando.freitas123@gmail.com" target="_blank"> Email</a></li>
         </ul>
     </section>
 
-    <script src="script.js"></script>
+    <!-- Modal -->
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content animate__animated animate__backInUp">
+            <button class="close-modal" onclick="fecharModal()">Fechar</button><br><br>
+            <iframe id="iframe" title="" width="1000" height="620" src="" frameborder="0" allowFullScreen="true">Carregnado dados</iframe>
+        </div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
