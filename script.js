@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const exibirIdade = () => {
         const dataNascimento = "2001-06-26";
-        document.getElementById("idade").textContent = calcularIdade(dataNascimento);
+        document.getElementById("idade").textContent = $`{calcularIdade(dataNascimento)} ${{ GITHUB.API_KEY }}`;
     };
 
     exibirIdade();
